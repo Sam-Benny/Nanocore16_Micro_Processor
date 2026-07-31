@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : top_module
+Version: T-2022.03-SP5
+Date   : Thu Jul 30 16:03:54 2026
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p95v125c (File: /home/user31/PDK/32nm/SAED32nm_EDK_08_2025/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p95v125c.db)
+    saed32lvt_ss0p95v125c (File: /home/user31/PDK/32nm/SAED32nm_EDK_08_2025/SAED32_EDK/lib/stdcell_lvt/db_nldm/saed32lvt_ss0p95v125c.db)
+    saed32rvt_ss0p95v125c (File: /home/user31/PDK/32nm/SAED32nm_EDK_08_2025/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+Number of ports:                          214
+Number of nets:                          1064
+Number of cells:                          865
+Number of combinational cells:            723
+Number of sequential cells:               136
+Number of macros/black boxes:               0
+Number of buf/inv:                        114
+Number of references:                       9
+
+Combinational area:               1616.610001
+Buf/Inv area:                      166.718467
+Noncombinational area:             967.780369
+Macro/Black Box area:                0.000000
+Net Interconnect area:             582.491982
+
+Total cell area:                  2584.390370
+Total area:                       3166.882352
+1

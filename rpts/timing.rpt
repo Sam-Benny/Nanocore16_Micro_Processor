@@ -1,0 +1,1935 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 10
+Design : top_module
+Version: T-2022.03-SP5
+Date   : Thu Jul 30 16:01:51 2026
+****************************************
+
+Operating Conditions: ss0p95v125c   Library: saed32hvt_ss0p95v125c
+Wire Load Model Mode: enclosed
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U18/Y (INVX1_LVT)                   0.02       3.24 r
+  dut3/U17/Y (AND2X1_LVT)                  0.03       3.28 r
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.40 f
+  dut3/branch_en (decoder)                 0.00       3.40 f
+  dut/branch_en (pc)                       0.00       3.40 f
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 r
+  dut/U19/Y (AND2X2_HVT)                   0.13       3.59 r
+  dut/U17/Y (AND4X1_HVT)                   0.13       3.73 r
+  dut/U27/Y (AO22X1_HVT)                   0.10       3.83 r
+  dut/U28/Y (AO21X1_HVT)                   0.07       3.89 r
+  dut/pc_out_reg[13]/D (DFFARX1_HVT)       0.00       3.89 r
+  data arrival time                                   3.89
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[13]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.10       3.90
+  data required time                                  3.90
+  -----------------------------------------------------------
+  data required time                                  3.90
+  data arrival time                                  -3.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[4]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U21/Y (AO21X1_LVT)                  0.05       3.28 f
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.39 r
+  dut3/branch_en (decoder)                 0.00       3.39 r
+  dut/branch_en (pc)                       0.00       3.39 r
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 f
+  dut/U19/Y (AND2X2_HVT)                   0.14       3.59 f
+  dut/U6/Y (INVX0_HVT)                     0.08       3.67 r
+  dut/U51/Y (AO221X1_HVT)                  0.14       3.81 r
+  dut/U53/Y (NAND3X0_HVT)                  0.08       3.90 f
+  dut/pc_out_reg[4]/D (DFFARX1_HVT)        0.00       3.90 f
+  data arrival time                                   3.90
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[10]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U21/Y (AO21X1_LVT)                  0.05       3.28 f
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.39 r
+  dut3/branch_en (decoder)                 0.00       3.39 r
+  dut/branch_en (pc)                       0.00       3.39 r
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 f
+  dut/U19/Y (AND2X2_HVT)                   0.14       3.59 f
+  dut/U6/Y (INVX0_HVT)                     0.08       3.67 r
+  dut/U36/Y (AO221X1_HVT)                  0.14       3.81 r
+  dut/U38/Y (NAND3X0_HVT)                  0.08       3.90 f
+  dut/pc_out_reg[10]/D (DFFARX1_HVT)       0.00       3.90 f
+  data arrival time                                   3.90
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[10]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[12]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U21/Y (AO21X1_LVT)                  0.05       3.28 f
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.39 r
+  dut3/branch_en (decoder)                 0.00       3.39 r
+  dut/branch_en (pc)                       0.00       3.39 r
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 f
+  dut/U19/Y (AND2X2_HVT)                   0.14       3.59 f
+  dut/U6/Y (INVX0_HVT)                     0.08       3.67 r
+  dut/U31/Y (AO221X1_HVT)                  0.14       3.81 r
+  dut/U33/Y (NAND3X0_HVT)                  0.08       3.90 f
+  dut/pc_out_reg[12]/D (DFFARX1_HVT)       0.00       3.90 f
+  data arrival time                                   3.90
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[12]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[8]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U21/Y (AO21X1_LVT)                  0.05       3.28 f
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.39 r
+  dut3/branch_en (decoder)                 0.00       3.39 r
+  dut/branch_en (pc)                       0.00       3.39 r
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 f
+  dut/U19/Y (AND2X2_HVT)                   0.14       3.59 f
+  dut/U6/Y (INVX0_HVT)                     0.08       3.67 r
+  dut/U41/Y (AO221X1_HVT)                  0.14       3.81 r
+  dut/U43/Y (NAND3X0_HVT)                  0.08       3.90 f
+  dut/pc_out_reg[8]/D (DFFARX1_HVT)        0.00       3.90 f
+  data arrival time                                   3.90
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[8]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[6]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U21/Y (AO21X1_LVT)                  0.05       3.28 f
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.39 r
+  dut3/branch_en (decoder)                 0.00       3.39 r
+  dut/branch_en (pc)                       0.00       3.39 r
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 f
+  dut/U19/Y (AND2X2_HVT)                   0.14       3.59 f
+  dut/U6/Y (INVX0_HVT)                     0.08       3.67 r
+  dut/U46/Y (AO221X1_HVT)                  0.14       3.81 r
+  dut/U48/Y (NAND3X0_HVT)                  0.08       3.90 f
+  dut/pc_out_reg[6]/D (DFFARX1_HVT)        0.00       3.90 f
+  data arrival time                                   3.90
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[6]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.90
+  -----------------------------------------------------------
+  slack (MET)                                         0.01
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[15]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U18/Y (INVX1_LVT)                   0.02       3.24 r
+  dut3/U17/Y (AND2X1_LVT)                  0.03       3.28 r
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.40 f
+  dut3/branch_en (decoder)                 0.00       3.40 f
+  dut/branch_en (pc)                       0.00       3.40 f
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 r
+  dut/U21/Y (AO221X1_HVT)                  0.16       3.62 r
+  dut/U22/Y (OAI221X1_HVT)                 0.19       3.81 f
+  dut/U70/Y (NAND2X0_LVT)                  0.03       3.84 r
+  dut/U83/Y (AO21X1_RVT)                   0.05       3.89 r
+  dut/pc_out_reg[15]/D (DFFARX1_HVT)       0.00       3.89 r
+  data arrival time                                   3.89
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[15]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.89
+  -----------------------------------------------------------
+  slack (MET)                                         0.02
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[14]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U18/Y (INVX1_LVT)                   0.02       3.24 r
+  dut3/U17/Y (AND2X1_LVT)                  0.03       3.28 r
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.40 f
+  dut3/branch_en (decoder)                 0.00       3.40 f
+  dut/branch_en (pc)                       0.00       3.40 f
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 r
+  dut/U19/Y (AND2X2_HVT)                   0.13       3.59 r
+  dut/U17/Y (AND4X1_HVT)                   0.13       3.73 r
+  dut/U49/Y (AND2X1_LVT)                   0.04       3.77 r
+  dut/U34/Y (INVX1_LVT)                    0.01       3.78 f
+  dut/U25/Y (NOR2X0_LVT)                   0.05       3.83 r
+  dut/U24/Y (OR2X1_LVT)                    0.03       3.86 r
+  dut/pc_out_reg[14]/D (DFFARX1_HVT)       0.00       3.86 r
+  data arrival time                                   3.86
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[14]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.86
+  -----------------------------------------------------------
+  slack (MET)                                         0.05
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U18/Y (INVX1_LVT)                   0.02       3.24 r
+  dut3/U17/Y (AND2X1_LVT)                  0.03       3.28 r
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.40 f
+  dut3/branch_en (decoder)                 0.00       3.40 f
+  dut/branch_en (pc)                       0.00       3.40 f
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 r
+  dut/U55/Y (AO21X1_HVT)                   0.12       3.59 r
+  dut/U56/Y (OAI221X1_HVT)                 0.18       3.77 f
+  dut/U58/Y (NAND3X0_LVT)                  0.03       3.80 r
+  dut/pc_out_reg[2]/D (DFFARX1_HVT)        0.00       3.80 r
+  data arrival time                                   3.80
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[2]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.10       3.90
+  data required time                                  3.90
+  -----------------------------------------------------------
+  data required time                                  3.90
+  data arrival time                                  -3.80
+  -----------------------------------------------------------
+  slack (MET)                                         0.10
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: dut/pc_out_reg[3]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: REG2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+  decoder            ForQA                 saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  dut3/zero_flag (decoder)                 0.00       3.23 f
+  dut3/U18/Y (INVX1_LVT)                   0.02       3.24 r
+  dut3/U17/Y (AND2X1_LVT)                  0.03       3.28 r
+  dut3/U16/Y (NOR2X1_HVT)                  0.12       3.40 f
+  dut3/branch_en (decoder)                 0.00       3.40 f
+  dut/branch_en (pc)                       0.00       3.40 f
+  dut/U23/Y (INVX0_HVT)                    0.06       3.46 r
+  dut/U19/Y (AND2X2_HVT)                   0.13       3.59 r
+  dut/U63/Y (NAND2X0_HVT)                  0.06       3.66 f
+  dut/U64/Y (AO22X1_HVT)                   0.08       3.74 f
+  dut/U66/Y (NAND2X0_LVT)                  0.03       3.77 r
+  dut/pc_out_reg[3]/D (DFFARX1_HVT)        0.00       3.77 r
+  data arrival time                                   3.77
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[3]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -3.77
+  -----------------------------------------------------------
+  slack (MET)                                         0.13
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  pc_en (in)                               0.00       0.20 r
+  dut/pc_en (pc)                           0.00       0.20 r
+  dut/U19/Y (AND2X2_HVT)                   0.12       0.32 r
+  dut/U17/Y (AND4X1_HVT)                   0.13       0.45 r
+  dut/U27/Y (AO22X1_HVT)                   0.10       0.55 r
+  dut/U28/Y (AO21X1_HVT)                   0.07       0.62 r
+  dut/pc_out_reg[13]/D (DFFARX1_HVT)       0.00       0.62 r
+  data arrival time                                   0.62
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[13]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.10       3.90
+  data required time                                  3.90
+  -----------------------------------------------------------
+  data required time                                  3.90
+  data arrival time                                  -0.62
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[4]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U19/Y (AND2X2_HVT)                   0.11       0.31 f
+  dut/U6/Y (INVX0_HVT)                     0.08       0.39 r
+  dut/U51/Y (AO221X1_HVT)                  0.14       0.53 r
+  dut/U53/Y (NAND3X0_HVT)                  0.08       0.61 f
+  dut/pc_out_reg[4]/D (DFFARX1_HVT)        0.00       0.61 f
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[10]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U19/Y (AND2X2_HVT)                   0.11       0.31 f
+  dut/U6/Y (INVX0_HVT)                     0.08       0.39 r
+  dut/U36/Y (AO221X1_HVT)                  0.14       0.53 r
+  dut/U38/Y (NAND3X0_HVT)                  0.08       0.61 f
+  dut/pc_out_reg[10]/D (DFFARX1_HVT)       0.00       0.61 f
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[10]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[12]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U19/Y (AND2X2_HVT)                   0.11       0.31 f
+  dut/U6/Y (INVX0_HVT)                     0.08       0.39 r
+  dut/U31/Y (AO221X1_HVT)                  0.14       0.53 r
+  dut/U33/Y (NAND3X0_HVT)                  0.08       0.61 f
+  dut/pc_out_reg[12]/D (DFFARX1_HVT)       0.00       0.61 f
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[12]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[8]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U19/Y (AND2X2_HVT)                   0.11       0.31 f
+  dut/U6/Y (INVX0_HVT)                     0.08       0.39 r
+  dut/U41/Y (AO221X1_HVT)                  0.14       0.53 r
+  dut/U43/Y (NAND3X0_HVT)                  0.08       0.61 f
+  dut/pc_out_reg[8]/D (DFFARX1_HVT)        0.00       0.61 f
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[8]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[6]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U19/Y (AND2X2_HVT)                   0.11       0.31 f
+  dut/U6/Y (INVX0_HVT)                     0.08       0.39 r
+  dut/U46/Y (AO221X1_HVT)                  0.14       0.53 r
+  dut/U48/Y (NAND3X0_HVT)                  0.08       0.61 f
+  dut/pc_out_reg[6]/D (DFFARX1_HVT)        0.00       0.61 f
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[6]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[15]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 f
+  pc_en (in)                               0.00       0.20 f
+  dut/pc_en (pc)                           0.00       0.20 f
+  dut/U18/Y (INVX0_HVT)                    0.03       0.23 r
+  dut/U21/Y (AO221X1_HVT)                  0.12       0.35 r
+  dut/U22/Y (OAI221X1_HVT)                 0.19       0.53 f
+  dut/U70/Y (NAND2X0_LVT)                  0.03       0.57 r
+  dut/U83/Y (AO21X1_RVT)                   0.05       0.61 r
+  dut/pc_out_reg[15]/D (DFFARX1_HVT)       0.00       0.61 r
+  data arrival time                                   0.61
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[15]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.61
+  -----------------------------------------------------------
+  slack (MET)                                         3.29
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[14]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  pc_en (in)                               0.00       0.20 r
+  dut/pc_en (pc)                           0.00       0.20 r
+  dut/U19/Y (AND2X2_HVT)                   0.12       0.32 r
+  dut/U17/Y (AND4X1_HVT)                   0.13       0.45 r
+  dut/U49/Y (AND2X1_LVT)                   0.04       0.49 r
+  dut/U34/Y (INVX1_LVT)                    0.01       0.50 f
+  dut/U25/Y (NOR2X0_LVT)                   0.05       0.55 r
+  dut/U24/Y (OR2X1_LVT)                    0.03       0.59 r
+  dut/pc_out_reg[14]/D (DFFARX1_HVT)       0.00       0.59 r
+  data arrival time                                   0.59
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[14]/CLK (DFFARX1_HVT)     0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.59
+  -----------------------------------------------------------
+  slack (MET)                                         3.33
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[2]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  pc_en (in)                               0.00       0.20 r
+  dut/pc_en (pc)                           0.00       0.20 r
+  dut/U19/Y (AND2X2_HVT)                   0.12       0.32 r
+  dut/U56/Y (OAI221X1_HVT)                 0.17       0.49 f
+  dut/U58/Y (NAND3X0_LVT)                  0.03       0.52 r
+  dut/pc_out_reg[2]/D (DFFARX1_HVT)        0.00       0.52 r
+  data arrival time                                   0.52
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[2]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.10       3.90
+  data required time                                  3.90
+  -----------------------------------------------------------
+  data required time                                  3.90
+  data arrival time                                  -0.52
+  -----------------------------------------------------------
+  slack (MET)                                         3.38
+
+
+  Startpoint: pc_en (input port clocked by CLK)
+  Endpoint: dut/pc_out_reg[3]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: IN2REG
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  pc                 8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  input external delay                     0.20       0.20 r
+  pc_en (in)                               0.00       0.20 r
+  dut/pc_en (pc)                           0.00       0.20 r
+  dut/U19/Y (AND2X2_HVT)                   0.12       0.32 r
+  dut/U63/Y (NAND2X0_HVT)                  0.06       0.38 f
+  dut/U64/Y (AO22X1_HVT)                   0.08       0.46 f
+  dut/U66/Y (NAND2X0_LVT)                  0.03       0.50 r
+  dut/pc_out_reg[3]/D (DFFARX1_HVT)        0.00       0.50 r
+  data arrival time                                   0.50
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  dut/pc_out_reg[3]/CLK (DFFARX1_HVT)      0.00       4.00 r
+  library setup time                      -0.09       3.91
+  data required time                                  3.91
+  -----------------------------------------------------------
+  data required time                                  3.91
+  data arrival time                                  -0.50
+  -----------------------------------------------------------
+  slack (MET)                                         3.41
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: zero_flag (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/U173/Y (NOR4X1_LVT)                 0.08       3.23 f
+  dut5/zero_flag (alu)                     0.00       3.23 f
+  zero_flag (out)                          0.00       3.23 f
+  data arrival time                                   3.23
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -3.23
+  -----------------------------------------------------------
+  slack (MET)                                         0.47
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[7]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U171/Y (AND2X1_HVT)                 0.07       2.92 f
+  dut5/U221/Y (AND2X1_HVT)                 0.06       2.98 f
+  dut5/U138/Y (NOR2X1_HVT)                 0.09       3.07 r
+  dut5/U174/Y (OR2X1_LVT)                  0.08       3.15 r
+  dut5/alu_result[7] (alu)                 0.00       3.15 r
+  alu_result[7] (out)                      0.00       3.15 r
+  data arrival time                                   3.15
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -3.15
+  -----------------------------------------------------------
+  slack (MET)                                         0.55
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[5]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U146/Y (AOI22X1_HVT)                0.10       2.36 r
+  dut5/U147/Y (AND2X1_HVT)                 0.07       2.43 r
+  dut5/U148/Y (OA222X1_HVT)                0.11       2.54 r
+  dut5/U150/Y (OA222X1_HVT)                0.14       2.68 r
+  dut5/U151/Y (NAND3X0_HVT)                0.34       3.01 f
+  dut5/alu_result[5] (alu)                 0.00       3.01 f
+  alu_result[5] (out)                      0.00       3.01 f
+  data arrival time                                   3.01
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -3.01
+  -----------------------------------------------------------
+  slack (MET)                                         0.69
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[6]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U209/Y (OA22X1_RVT)                 0.08       2.51 r
+  dut5/U215/Y (AND2X1_HVT)                 0.08       2.59 r
+  dut5/U162/Y (OA221X1_HVT)                0.12       2.71 r
+  dut5/U211/Y (OR2X1_HVT)                  0.08       2.79 r
+  dut5/U27/Y (AND2X1_HVT)                  0.07       2.85 r
+  dut5/U203/Y (OAI21X2_LVT)                0.09       2.94 f
+  dut5/alu_result[6] (alu)                 0.00       2.94 f
+  alu_result[6] (out)                      0.00       2.94 f
+  data arrival time                                   2.94
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.94
+  -----------------------------------------------------------
+  slack (MET)                                         0.76
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[3]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U24/Y (NBUFFX2_HVT)                 0.10       1.71 r
+  dut5/U36/Y (NAND2X0_HVT)                 0.09       1.80 f
+  dut5/U176/Y (AO22X1_LVT)                 0.07       1.87 f
+  dut5/U213/CO (FADDX1_HVT)                0.11       1.98 f
+  dut5/U182/Y (NAND2X0_HVT)                0.06       2.03 r
+  dut5/U183/Y (AND2X1_HVT)                 0.08       2.12 r
+  dut5/U185/Y (AND2X1_HVT)                 0.07       2.19 r
+  dut5/U186/Y (OA222X1_HVT)                0.10       2.30 r
+  dut5/U187/Y (AND2X1_HVT)                 0.08       2.38 r
+  dut5/U189/Y (AND2X1_HVT)                 0.07       2.45 r
+  dut5/U191/Y (AO22X1_HVT)                 0.12       2.57 r
+  dut5/U195/Y (NAND4X0_HVT)                0.37       2.94 f
+  dut5/alu_result[3] (alu)                 0.00       2.94 f
+  alu_result[3] (out)                      0.00       2.94 f
+  data arrival time                                   2.94
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.94
+  -----------------------------------------------------------
+  slack (MET)                                         0.76
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: carry_flag (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U161/Y (AO21X1_LVT)                 0.07       2.26 f
+  dut5/U156/Y (AOI222X1_HVT)               0.17       2.43 r
+  dut5/U40/Y (AO222X1_HVT)                 0.17       2.61 r
+  dut5/U7/Y (INVX0_HVT)                    0.05       2.66 f
+  dut5/U169/Y (OA22X1_HVT)                 0.11       2.77 f
+  dut5/U170/Y (OR2X1_HVT)                  0.08       2.85 f
+  dut5/U200/Y (NAND3X0_HVT)                0.03       2.88 r
+  dut5/carry_flag (alu)                    0.00       2.88 r
+  carry_flag (out)                         0.00       2.88 r
+  data arrival time                                   2.88
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.88
+  -----------------------------------------------------------
+  slack (MET)                                         0.82
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[4]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U175/Y (AND2X1_LVT)                 0.05       1.66 r
+  dut5/U88/Y (OA222X1_HVT)                 0.15       1.81 r
+  dut5/U125/Y (OA222X1_HVT)                0.20       2.01 r
+  dut5/U216/CO (FADDX1_HVT)                0.14       2.15 r
+  dut5/U131/Y (INVX0_HVT)                  0.05       2.20 f
+  dut5/U127/Y (OA22X1_HVT)                 0.12       2.31 f
+  dut5/U132/Y (OA222X1_HVT)                0.15       2.46 f
+  dut5/U134/Y (OA222X1_HVT)                0.12       2.58 f
+  dut5/U130/Y (NAND2X0_HVT)                0.05       2.64 r
+  dut5/U28/Y (OR2X1_HVT)                   0.13       2.76 r
+  dut5/alu_result[4] (alu)                 0.00       2.76 r
+  alu_result[4] (out)                      0.00       2.76 r
+  data arrival time                                   2.76
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.76
+  -----------------------------------------------------------
+  slack (MET)                                         0.94
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[1]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U24/Y (NBUFFX2_HVT)                 0.10       1.71 r
+  dut5/U34/Y (INVX0_HVT)                   0.08       1.78 f
+  dut5/U60/Y (NAND2X0_HVT)                 0.13       1.92 r
+  dut5/U10/Y (INVX0_HVT)                   0.09       2.00 f
+  dut5/U112/Y (NAND2X0_HVT)                0.07       2.08 r
+  dut5/U114/Y (AND2X1_HVT)                 0.08       2.16 r
+  dut5/U116/Y (AND2X1_HVT)                 0.07       2.23 r
+  dut5/U117/Y (OA22X1_HVT)                 0.11       2.34 r
+  dut5/U121/Y (NAND4X0_HVT)                0.38       2.72 f
+  dut5/alu_result[1] (alu)                 0.00       2.72 f
+  alu_result[1] (out)                      0.00       2.72 f
+  data arrival time                                   2.72
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.72
+  -----------------------------------------------------------
+  slack (MET)                                         0.98
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[0]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U24/Y (NBUFFX2_HVT)                 0.10       1.71 r
+  dut5/U34/Y (INVX0_HVT)                   0.08       1.78 f
+  dut5/U60/Y (NAND2X0_HVT)                 0.13       1.92 r
+  dut5/U74/Y (OA21X1_HVT)                  0.16       2.07 r
+  dut5/U75/Y (OA21X1_HVT)                  0.10       2.18 r
+  dut5/U76/Y (AO221X1_HVT)                 0.15       2.32 r
+  dut5/U77/Y (NAND4X0_HVT)                 0.39       2.71 f
+  dut5/alu_result[0] (alu)                 0.00       2.71 f
+  alu_result[0] (out)                      0.00       2.71 f
+  data arrival time                                   2.71
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.71
+  -----------------------------------------------------------
+  slack (MET)                                         0.99
+
+
+  Startpoint: dut/pc_out_reg[4]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: alu_result[2]
+            (output port clocked by CLK)
+  Path Group: REG2OUT
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  top_module         8000                  saed32hvt_ss0p95v125c
+  instruction_memory ForQA                 saed32hvt_ss0p95v125c
+  reg_file           8000                  saed32hvt_ss0p95v125c
+  alu                8000                  saed32hvt_ss0p95v125c
+
+  Point                                    Incr       Path
+  -----------------------------------------------------------
+  clock CLK (rise edge)                    0.00       0.00
+  clock network delay (ideal)              0.00       0.00
+  dut/pc_out_reg[4]/CLK (DFFARX1_HVT)      0.00       0.00 r
+  dut/pc_out_reg[4]/Q (DFFARX1_HVT)        0.26       0.26 r
+  dut/pc_out[4] (pc)                       0.00       0.26 r
+  dut2/addr[4] (instruction_memory)        0.00       0.26 r
+  dut2/U4/Y (INVX1_HVT)                    0.11       0.37 f
+  dut2/U27/Y (NAND3X0_HVT)                 0.11       0.49 r
+  dut2/U28/Y (INVX0_HVT)                   0.08       0.57 f
+  dut2/U29/Y (AND3X1_HVT)                  0.16       0.73 f
+  dut2/U44/Y (AO22X1_RVT)                  0.13       0.86 f
+  dut2/instr[1] (instruction_memory)       0.00       0.86 f
+  dut3/instr[1] (decoder)                  0.00       0.86 f
+  dut3/rs2_addr[1] (decoder)               0.00       0.86 f
+  dut4/rs2_addr[1] (reg_file)              0.00       0.86 f
+  dut4/U2/Y (INVX1_HVT)                    0.05       0.91 r
+  dut4/U324/Y (NAND3X0_HVT)                0.09       1.01 f
+  dut4/U323/Y (INVX2_HVT)                  0.09       1.09 r
+  dut4/U156/Y (AOI22X1_HVT)                0.17       1.26 f
+  dut4/U319/Y (NAND2X0_HVT)                0.04       1.30 r
+  dut4/U28/Y (OR2X1_RVT)                   0.06       1.36 r
+  dut4/U54/Y (OR2X1_HVT)                   0.06       1.43 r
+  dut4/U79/Y (AO22X1_HVT)                  0.09       1.51 r
+  dut4/rs2_data[0] (reg_file)              0.00       1.51 r
+  U13/Y (AO22X1_HVT)                       0.10       1.61 r
+  dut5/operand_b[0] (alu)                  0.00       1.61 r
+  dut5/U24/Y (NBUFFX2_HVT)                 0.10       1.71 r
+  dut5/U36/Y (NAND2X0_HVT)                 0.09       1.80 f
+  dut5/U176/Y (AO22X1_LVT)                 0.07       1.87 f
+  dut5/U86/Y (NAND2X0_HVT)                 0.05       1.92 r
+  dut5/U87/Y (AND2X1_HVT)                  0.08       2.00 r
+  dut5/U90/Y (AND2X1_HVT)                  0.07       2.07 r
+  dut5/U95/Y (OA221X1_HVT)                 0.14       2.21 r
+  dut5/U97/Y (AO221X1_HVT)                 0.14       2.36 r
+  dut5/U98/Y (NAND3X0_HVT)                 0.34       2.69 f
+  dut5/alu_result[2] (alu)                 0.00       2.69 f
+  alu_result[2] (out)                      0.00       2.69 f
+  data arrival time                                   2.69
+
+  clock CLK (rise edge)                    4.00       4.00
+  clock network delay (ideal)              0.00       4.00
+  output external delay                   -0.30       3.70
+  data required time                                  3.70
+  -----------------------------------------------------------
+  data required time                                  3.70
+  data arrival time                                  -2.69
+  -----------------------------------------------------------
+  slack (MET)                                         1.01
+
+
+1
