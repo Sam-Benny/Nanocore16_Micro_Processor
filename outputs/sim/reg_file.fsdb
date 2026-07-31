@@ -1,0 +1,135 @@
+$date
+	Tue Jun 23 14:18:02 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_reg_file $end
+$var wire 8 ! tb_rs2_data [7:0] $end
+$var wire 8 " tb_rs1_data [7:0] $end
+$var reg 1 # tb_clk $end
+$var reg 4 $ tb_rd_addr [3:0] $end
+$var reg 4 % tb_rs1_addr [3:0] $end
+$var reg 4 & tb_rs2_addr [3:0] $end
+$var reg 1 ' tb_rst_n $end
+$var reg 8 ( tb_wr_data [7:0] $end
+$var reg 1 ) tb_wr_en $end
+$scope module dut $end
+$var wire 1 # clk $end
+$var wire 4 * rd_addr [3:0] $end
+$var wire 4 + rs1_addr [3:0] $end
+$var wire 8 , rs1_data [7:0] $end
+$var wire 4 - rs2_addr [3:0] $end
+$var wire 8 . rs2_data [7:0] $end
+$var wire 1 ' rst_n $end
+$var wire 8 / wr_data [7:0] $end
+$var wire 1 ) wr_en $end
+$var integer 32 0 i [31:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b10000 0
+b0 /
+b0 .
+b0 -
+b0 ,
+b0 +
+b0 *
+0)
+b0 (
+0'
+b0 &
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#5
+1'
+1)
+b10100000 (
+b10100000 /
+b1 $
+b1 *
+1#
+#10
+0#
+#15
+1#
+b1110111 (
+b1110111 /
+b10 $
+b10 *
+#20
+0#
+#25
+1#
+b10110111 (
+b10110111 /
+b11 $
+b11 *
+#30
+0#
+#35
+1#
+b11000 (
+b11000 /
+b100 $
+b100 *
+#40
+0#
+#45
+1#
+b110110 (
+b110110 /
+b101 $
+b101 *
+#50
+0#
+#55
+1#
+0)
+b1110111 !
+b1110111 .
+b10 &
+b10 -
+b10100000 "
+b10100000 ,
+b1 %
+b1 +
+#60
+0#
+#65
+1#
+b11000 !
+b11000 .
+b100 &
+b100 -
+b10110111 "
+b10110111 ,
+b11 %
+b11 +
+#70
+0#
+#75
+b0 !
+b0 .
+b0 "
+b0 ,
+b10000 0
+1#
+0'
+#80
+0#
+#85
+b10000 0
+1#
