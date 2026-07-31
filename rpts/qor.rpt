@@ -1,0 +1,109 @@
+ 
+****************************************
+Report : qor
+Design : top_module
+Version: T-2022.03-SP5
+Date   : Fri Jul 31 15:05:11 2026
+****************************************
+
+
+  Timing Path Group 'REG2REG'
+  -----------------------------------
+  Levels of Logic:              38.00
+  Critical Path Length:          3.89
+  Critical Path Slack:           0.01
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'IN2REG'
+  -----------------------------------
+  Levels of Logic:               4.00
+  Critical Path Length:          0.42
+  Critical Path Slack:           3.29
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+  Timing Path Group 'REG2OUT'
+  -----------------------------------
+  Levels of Logic:              30.00
+  Critical Path Length:          3.23
+  Critical Path Slack:           0.47
+  Critical Path Clk Period:      4.00
+  Total Negative Slack:          0.00
+  No. of Violating Paths:        0.00
+  Worst Hold Violation:          0.00
+  Total Hold Violation:          0.00
+  No. of Hold Violations:        0.00
+  -----------------------------------
+
+
+  Cell Count
+  -----------------------------------
+  Hierarchical Cell Count:          5
+  Hierarchical Port Count:        185
+  Leaf Cell Count:                859
+  Buf/Inv Cell Count:             114
+  Buf Cell Count:                  28
+  Inv Cell Count:                  86
+  CT Buf/Inv Cell Count:           12
+  Combinational Cell Count:       723
+  Sequential Cell Count:          136
+  Macro Count:                      0
+  -----------------------------------
+
+
+  Area
+  -----------------------------------
+  Combinational Area:     1616.610001
+  Noncombinational Area:   967.780369
+  Buf/Inv Area:            166.718467
+  Total Buffer Area:            56.93
+  Total Inverter Area:         109.79
+  Macro/Black Box Area:      0.000000
+  Net Area:                582.491982
+  -----------------------------------
+  Cell Area:              2584.390370
+  Design Area:            3166.882352
+
+
+  Design Rules
+  -----------------------------------
+  Total Number of Nets:           895
+  Nets With Violations:             1
+  Max Trans Violations:             0
+  Max Cap Violations:               1
+  -----------------------------------
+
+
+  Hostname: eevlsidtlab031.ksrct.ac.in
+
+  Compile CPU Statistics
+  -----------------------------------------
+  Resource Sharing:                    0.01
+  Logic Optimization:                  0.07
+  Mapping Optimization:                5.38
+  -----------------------------------------
+  Overall Compile Time:               13.69
+  Overall Compile Wall Clock Time:    13.81
+
+  --------------------------------------------------------------------
+
+  Design  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+
+  Design (Hold)  WNS: 0.00  TNS: 0.00  Number of Violating Paths: 0
+
+  --------------------------------------------------------------------
+
+
+1
